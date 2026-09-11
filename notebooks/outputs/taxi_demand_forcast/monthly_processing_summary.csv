@@ -1,0 +1,13 @@
+file,total_rows,valid_demand_rows,invalid_demand_rows,valid_percent
+taxi_2025-04_cleaned.csv,3935777,3935777,0,100.0
+taxi_2025-05_cleaned.csv,4527549,4527549,0,100.0
+taxi_2025-06_cleaned.csv,4254357,4254357,0,100.0
+taxi_2025-07_cleaned.csv,3842891,3842891,0,100.0
+taxi_2025-08_cleaned.csv,3526241,3526241,0,100.0
+taxi_2025-09_cleaned.csv,4193829,4193829,0,100.0
+taxi_2025-10_cleaned.csv,4360718,4360718,0,100.0
+taxi_2025-11_cleaned.csv,4119300,4119300,0,100.0
+taxi_2025-12_cleaned.csv,4246976,4246976,0,100.0
+taxi_2026-01_cleaned.csv,3679812,3679812,0,100.0
+taxi_2026-02_cleaned.csv,3359253,3359253,0,100.0
+taxi_2026-03_cleaned.csv,3903299,3903299,0,100.0

@@ -1,0 +1,24 @@
+{
+    "dataset": {
+        "start": "2025-04-01 00:00:00",
+        "end": "2026-03-31 23:00:00",
+        "months": 12,
+        "top_zones": 10
+    },
+    "split": {
+        "validation_start": "2026-03-04 00:00:00",
+        "test_start": "2026-03-18 00:00:00"
+    },
+    "best_catboost_parameters": {
+        "iterations": 800,
+        "depth": 8,
+        "learning_rate": 0.03
+    },
+    "selected_validation_strategy": "CatBoost + Weekly (alpha=0.80)",
+    "ensemble_alpha": 0.8,
+    "test_metrics": {
+        "MAE": 28.607547231369153,
+        "RMSE": 44.312863185203625,
+        "R2": 0.887529055135792
+    }
+}
