@@ -1,7 +1,0 @@
-data/raw/
-data/processed/
-data/splits/
-*.pkl
-.ipynb_checkpoints/
-_pycache_/
-.env
