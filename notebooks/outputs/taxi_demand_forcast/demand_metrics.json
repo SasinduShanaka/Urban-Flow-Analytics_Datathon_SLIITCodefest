@@ -3,7 +3,28 @@
         "start": "2025-04-01 00:00:00",
         "end": "2026-03-31 23:00:00",
         "months": 12,
-        "top_zones": 10
+        "top_zones": 10,
+        "source": "raw monthly taxi files with demand-specific preprocessing"
+    },
+    "preprocessing": {
+        "task": "pickup-demand forecasting",
+        "hard_exclusions": [
+            "invalid pickup timestamp",
+            "invalid/unmapped pickup zone",
+            "pickup outside source month",
+            "exact duplicate raw record"
+        ],
+        "flagged_but_retained": [
+            "negative base fare",
+            "zero distance with non-zero fare",
+            "zero/missing rider count",
+            "non-positive duration",
+            "extreme derived speed"
+        ],
+        "extreme_speed_audit_threshold_mph": 100.0,
+        "raw_rows": 48601782,
+        "demand_eligible_rows": 48601611,
+        "demand_excluded_rows": 171
     },
     "split": {
         "validation_start": "2026-03-04 00:00:00",
@@ -17,8 +38,8 @@
     "selected_validation_strategy": "CatBoost + Weekly (alpha=0.80)",
     "ensemble_alpha": 0.8,
     "test_metrics": {
-        "MAE": 28.607547231369153,
-        "RMSE": 44.312863185203625,
-        "R2": 0.887529055135792
+        "MAE": 28.95201923612264,
+        "RMSE": 44.8016699121315,
+        "R2": 0.8886773704122037
     }
 }

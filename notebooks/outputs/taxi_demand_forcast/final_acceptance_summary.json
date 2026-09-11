@@ -1,0 +1,68 @@
+{
+    "run_status": "PASS",
+    "data": {
+        "raw_rows": 48601782,
+        "demand_eligible_rows": 48601611,
+        "demand_excluded_rows": 171,
+        "demand_excluded_percent": 0.00035183895109031186,
+        "exact_duplicate_rows": 1,
+        "pickup_outside_source_month": 170,
+        "nonpositive_duration_flagged_and_retained": 651610,
+        "negative_fare_flagged_and_retained": 2400031,
+        "extreme_speed_flagged_and_retained": 11899
+    },
+    "selection": {
+        "selected_on_validation": "CatBoost + Weekly (alpha=0.80)",
+        "method": "ensemble",
+        "alpha": 0.8,
+        "seasonal_period": 168,
+        "catboost_parameters": {
+            "iterations": 800,
+            "depth": 8,
+            "learning_rate": 0.03
+        }
+    },
+    "validation_metrics": {
+        "MAE": 27.203588161139105,
+        "RMSE": 42.88632603478519,
+        "R2": 0.9135340455222166
+    },
+    "test_metrics": {
+        "MAE": 28.95201923612264,
+        "RMSE": 44.8016699121315,
+        "R2": 0.8886773704122037
+    },
+    "test_best_row_for_transparency_only": {
+        "model": "CatBoost Demand Forecast",
+        "MAE": 28.78261620328719,
+        "RMSE": 44.435416921098884,
+        "R2": 0.8904900523894862
+    },
+    "standalone_catboost_better_on_test": true,
+    "generalization": {
+        "mae_change_percent": 6.427207560365901,
+        "rmse_change_percent": 4.466094567748167,
+        "r2_change": -0.024856675110012882
+    },
+    "baseline_improvement": {
+        "weekly_naive_mae_percent": 16.61056042263401,
+        "daily_naive_mae_percent": 45.97123874847428
+    },
+    "bias": {
+        "mean_test_error": 7.484217709960649,
+        "relative_mean_bias_percent": 4.335497867413952
+    },
+    "leakage_checks": {
+        "chronological_split_passed": true,
+        "training_only_zone_selection_passed": true,
+        "future_target_leakage_test_passed": true,
+        "max_future_target_stress_difference": 0.0
+    },
+    "future_forecast": {
+        "horizon_hours": 72,
+        "zones": 10,
+        "rows": 720,
+        "forecast_start": "2026-04-01 00:00:00",
+        "forecast_end": "2026-04-03 23:00:00"
+    }
+}

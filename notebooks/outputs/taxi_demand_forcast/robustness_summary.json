@@ -1,0 +1,22 @@
+{
+    "chronological_split_passed": true,
+    "training_only_zone_selection_passed": true,
+    "future_target_leakage_test_passed": true,
+    "validation_metrics": {
+        "MAE": 27.203588161139105,
+        "RMSE": 42.88632603478519,
+        "R2": 0.9135340455222166
+    },
+    "test_metrics": {
+        "MAE": 28.95201923612264,
+        "RMSE": 44.8016699121315,
+        "R2": 0.8886773704122037
+    },
+    "mae_generalization_gap_percent": 6.427207560365901,
+    "rmse_generalization_gap_percent": 4.466094567748167,
+    "r2_change": -0.024856675110012882,
+    "weekly_baseline_mae_improvement_percent": 16.61056042263401,
+    "daily_baseline_mae_improvement_percent": 45.97123874847428,
+    "mean_test_error": 7.484217709960649,
+    "relative_mean_bias_percent": 4.335497867413952
+}

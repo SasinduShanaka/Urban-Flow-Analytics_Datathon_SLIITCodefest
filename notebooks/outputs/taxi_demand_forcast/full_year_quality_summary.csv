@@ -1,0 +1,16 @@
+quality_check,count,percent_of_raw_rows
+invalid_pickup_timestamp,0,0.0
+invalid_dropoff_timestamp,0,0.0
+invalid_origin_loc_id,0,0.0
+origin_not_in_zone_lookup,0,0.0
+pickup_outside_source_month,170,0.0003497814133646375
+negative_base_fare,2400031,4.938154325287908
+zero_distance_nonzero_fare,1471746,3.0281729176103047
+rider_count_zero,231578,0.47648047143621197
+rider_count_missing,12405268,25.524306907100648
+dropoff_before_pickup,1942,0.003995738263259566
+zero_duration,649668,1.3367164191633962
+nonpositive_duration,651610,1.3407121574266556
+extreme_speed_flag,11899,0.024482641397798953
+exact_duplicate_rows,1,2.0575377256743383e-06
+demand_excluded_rows,171,0.00035183895109031186

@@ -1,0 +1,10 @@
+anomaly,demand_action,reason
+Invalid/missing pickup timestamp,DROP,Pickup cannot be assigned to an hourly demand bucket.
+Invalid/unmapped origin_loc_id,DROP,Pickup cannot be assigned to a known taxi zone.
+Pickup outside source month,DROP,Prevents cross-month contamination/double counting.
+Exact duplicate raw record,DROP DUPLICATE,An identical source record should not count twice as demand.
+Negative base fare,FLAG + KEEP,Fare anomaly does not by itself invalidate pickup timestamp/location.
+Zero distance with non-zero fare,FLAG + KEEP,Distance/fare inconsistency is not required to count a pickup.
+rider_count = 0 or missing,FLAG + KEEP,Passenger count is not required for the pickup-volume target.
+Drop-off before pickup / non-positive duration,FLAG + KEEP,"Drop-off quality is relevant to ETA, not necessarily to pickup occurrence."
+Derived speed > 100 mph,FLAG + KEEP,Conservative audit flag only; speed is not used to define pickup demand.
